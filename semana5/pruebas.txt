@@ -1,0 +1,5 @@
+Ruta /: al acceder a esta ruta principal, el servidor responde con el mensaje "Servidor activo", confirmando que el servidor está funcionando correctamente.
+
+Ruta /saludo: al acceder a esta ruta, el servidor responde con el mensaje "Hola comunidad", mostrando un saludo fijo definido en el código.
+
+Ruta /mensaje/:nombre: esta ruta recibe un parámetro dinámico desde la URL. Por ejemplo, al acceder a /mensaje/juan, el servidor toma "juan" como parámetro y responde con el mensaje "Hola juan", demostrando cómo se pueden recibir datos directamente desde la dirección web.
