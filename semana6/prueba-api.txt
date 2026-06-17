@@ -1,0 +1,18 @@
+Prueba de la API - Ruta /registro
+
+Se envió una petición POST a http://localhost:3000/registro usando Thunder Client (Visual Studio Code), con el siguiente cuerpo en formato JSON:
+
+{
+  "nombre": "Maria",
+  "mensaje": "Hola comunidad"
+}
+
+El servidor respondió con un código de estado 200 OK y el siguiente JSON:
+
+{
+  "estado": "Datos recibidos",
+  "nombre": "Maria",
+  "mensaje": "Hola comunidad"
+}
+
+Esto confirma que el servidor está leyendo correctamente los datos enviados en el cuerpo de la petición (req.body) gracias al middleware express.json(), y que los está devolviendo dentro de un objeto de respuesta junto con un mensaje de confirmación.
