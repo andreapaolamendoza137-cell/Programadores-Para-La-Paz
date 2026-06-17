@@ -1,0 +1,54 @@
+Prueba de la API - Ruta /reportes
+
+Primero se envió una petición POST a http://localhost:3000/reportes con el siguiente cuerpo en formato JSON:
+
+{
+  "tipo": "Infraestructura",
+  "descripcion": "Daño en alumbrado público"
+}
+
+El servidor respondió confirmando el registro:
+
+{
+  "mensaje": "Reporte registrado",
+  "reporte": {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Daño en alumbrado público"
+  }
+}
+
+Luego se envió un segundo reporte:
+
+{
+  "tipo": "Ambiente",
+  "descripcion": "Acumulación de residuos en una zona comunitaria"
+}
+
+El servidor respondió con:
+
+{
+  "mensaje": "Reporte registrado",
+  "reporte": {
+    "id": 2,
+    "tipo": "Ambiente",
+    "descripcion": "Acumulación de residuos en una zona comunitaria"
+  }
+}
+
+Finalmente, se envió una petición GET a http://localhost:3000/reportes para consultar los reportes guardados. El servidor respondió con un arreglo (array) que contiene todos los reportes almacenados hasta ese momento en memoria:
+
+[
+  {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Daño en alumbrado público"
+  },
+  {
+    "id": 2,
+    "tipo": "Ambiente",
+    "descripcion": "Acumulación de residuos en una zona comunitaria"
+  }
+]
+
+Esto demuestra que el servidor está usando el array "reportes" para guardar la información mientras está en ejecución, y que la ruta GET permite consultar en cualquier momento todos los registros que se han enviado mediante la ruta POST.
