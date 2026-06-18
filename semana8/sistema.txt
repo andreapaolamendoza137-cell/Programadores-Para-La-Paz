@@ -1,0 +1,16 @@
+Comandos ejecutados: uname -a y whoami
+
+1. uname -a
+Al ejecutar este comando en mi Codespace obtuve la siguiente salida:
+Linux codespaces-e250eb 6.8.0-1052-azure #58~22.04.1-Ubuntu SMP Thu Mar 26 05:02:01 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+Esta línea muestra información detallada sobre el sistema operativo y el kernel: el nombre del kernel (Linux), el nombre del equipo o contenedor (codespaces-e250eb), la versión del kernel (6.8.0-1052-azure), la fecha de compilación y la arquitectura del procesador (x86_64). Esta información es útil porque permite saber exactamente en qué entorno se está trabajando, lo cual es importante al instalar programas, depurar errores o verificar la compatibilidad de un servicio con el sistema.
+
+2. whoami
+Al ejecutar este comando obtuve:
+codespace
+
+Este comando muestra el nombre del usuario que está actualmente conectado en la terminal. Es útil porque permite confirmar con qué nivel de permisos se está trabajando, lo cual ayuda a evitar ejecutar comandos con privilegios incorrectos o a identificar quién realizó una acción dentro del sistema.
+
+¿Por qué es útil conocer esta información al administrar un servidor?
+Cuando se administra un servidor, conocer el sistema operativo, la arquitectura y el usuario activo permite tomar decisiones correctas sobre qué comandos o paquetes se pueden instalar, detectar si se tienen los permisos necesarios para realizar una tarea, y diagnosticar problemas relacionados con la configuración del entorno. También ayuda a mantener un registro claro de quién accede al sistema y bajo qué condiciones, lo cual es una práctica básica de seguridad y control.
